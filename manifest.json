@@ -11,7 +11,7 @@
     "icons": {
     },
     "content_scripts": [{
-        "matches": ["https://blog.csdn.net/*"],
+        "matches": ["https://blog.csdn.net/*","https://www.it1352.com/*"],
         "js": ["main.js"],
         "run_at": "document_end"
     }],
