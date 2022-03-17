@@ -13,7 +13,7 @@
     function InjectJs(jsPath) {
       var s = document.createElement('script');
       s.setAttribute('type', 'text/javascript');
-      s.src = chrome.runtime.getURL(jsPath);
+      s.src = chrome.extension.getURL(jsPath);
       document.head.appendChild(s);
     }
     InjectJs("hack.js");
