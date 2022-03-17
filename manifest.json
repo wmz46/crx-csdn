@@ -1,22 +1,35 @@
 ﻿{
-    "manifest_version": 2,
-
-    "name": "CSDN你真是个小可爱",
-    "description": "去掉复制的小尾巴，未登录允许代码复制",
-    "version": "1.0",
-
-    "permissions": [
-        "https://blog.csdn.net/"
-    ],
-    "icons": {
-    },
-    "content_scripts": [{
-        "matches": ["https://blog.csdn.net/*","https://www.it1352.com/*"],
-        "js": ["main.js"],
-        "run_at": "document_end"
-    }],
-    "browser_action": {
-        "default_title": "CSDN你真是个小可爱"
-    },
-	"web_accessible_resources": [ "hack.js" ]
+  "manifest_version": 3,
+  "name": "CSDN你真是个小可爱",
+  "description": "去掉复制的小尾巴，未登录允许代码复制",
+  "version": "1.0",
+  "host_permissions": [
+    "https://blog.csdn.net/"
+  ],
+  "icons": {},
+  "content_scripts": [
+    {
+      "matches": [
+        "https://blog.csdn.net/*",
+        "https://www.it1352.com/*"
+      ],
+      "js": [
+        "main.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_title": "CSDN你真是个小可爱"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "hack.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
 }
