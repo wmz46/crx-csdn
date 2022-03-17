@@ -4,8 +4,8 @@
   preElList.forEach(el => {
     el.style.userSelect = 'auto'
     let codeEl = el.querySelector('code')
-    if(codeEl ){
-        codeEl.style.userSelect = 'auto'
+    if (codeEl) {
+      codeEl.style.userSelect = 'auto'
     }
   })
 
@@ -19,23 +19,41 @@
 
   //移除it1352的登录限制
   let maskDom = document.querySelector('.arc-body-main-more')
-  if(maskDom){
-    maskDom.style.display='none'
+  if (maskDom) {
+    maskDom.style.display = 'none'
   }
   let codeDom = document.querySelector('.arc-body-main')
-  if(codeDom){
-    codeDom.style.height='auto'
-    codeDom.style.overflow='auto'
+  if (codeDom) {
+    codeDom.style.height = 'auto'
+    codeDom.style.overflow = 'auto'
   }
 
   //移除腾讯云社区需要关注限制
   maskDom = document.querySelector('.com-markdown-collpase-toggle')
-  if(maskDom){
+  if (maskDom) {
     maskDom.style.display = 'none'
   }
   codeDom = document.querySelector('.com-markdown-collpase-main')
-  if(codeDom){
-    codeDom.style.maxHeight='100%'
+  if (codeDom) {
+    codeDom.style.maxHeight = '100%'
+  }
+  //去百度搜索广告
+  let adTags = document.querySelectorAll('.ec-tuiguang')
+  adTags.forEach(tag => {
+    let parent = tag.parentNode
+    while (parent != null) {
+      if (parent.className.indexOf('c-container') > -1) {
+        parent.style.display = 'none'
+        break;
+      } else {
+        parent = parent.parentNode
+      }
+    }
+  })
+  //去百度爱采购
+  let b2bDom = document.querySelector('.op-b2b-straight')
+  if (b2bDom != null) {
+    b2bDom.parentNode.style.display = 'none'
   }
 
 })()
