@@ -1,2 +1,4 @@
 ﻿//去掉复制小尾巴
-window.csdn.copyright.textData=''
+if(window.csdn && window.csdn.copyright && window.csdn.copyright.textData){
+  window.csdn.copyright.textData=''
+}
