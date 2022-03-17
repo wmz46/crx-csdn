@@ -1,5 +1,5 @@
 ﻿(function () {
-  if (document.domain == "blog.csdn.net") {
+  if (window.location.hostname == "blog.csdn.net") {
     //允许复制
     let preElList = document.querySelectorAll('pre')
     preElList.forEach(el => {
@@ -19,7 +19,7 @@
     InjectJs("hack.js");
 
   }
-  if (document.domain == 'www.it1352.com') {
+  if (window.location.hostname == 'www.it1352.com') {
     //移除it1352的登录限制
     let maskDom = document.querySelector('.arc-body-main-more')
     if (maskDom) {
@@ -31,7 +31,7 @@
       codeDom.style.overflow = 'auto'
     }
   }
-  if (document.domain == 'cloud.tencent.com') {
+  if (window.location.hostname == 'cloud.tencent.com') {
     //移除腾讯云社区需要关注限制
     maskDom = document.querySelector('.com-markdown-collpase-toggle')
     if (maskDom) {
@@ -43,7 +43,7 @@
     }
   }
 
-  if (document.domain == 'www.baidu.com') {
+  if (window.location.hostname == 'www.baidu.com') {
     //去百度搜索广告
     let innerHTML = "";
     setInterval(function () {
