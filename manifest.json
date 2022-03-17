@@ -12,7 +12,7 @@
       "matches": [
         "https://blog.csdn.net/*",
         "https://www.it1352.com/*",
-	"https://cloud.tencent.com/*",
+        "https://cloud.tencent.com/*",
         "https://www.baidu.com/*"
       ],
       "js": [
