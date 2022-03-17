@@ -27,4 +27,15 @@
     codeDom.style.height='auto'
     codeDom.style.overflow='auto'
   }
+
+  //移除腾讯云社区需要关注限制
+  maskDom = document.querySelector('.com-markdown-collpase-toggle')
+  if(maskDom){
+    maskDom.style.display = 'none'
+  }
+  codeDom = document.querySelector('.com-markdown-collpase-main')
+  if(codeDom){
+    codeDom.style.maxHeight='100%'
+  }
+
 })()

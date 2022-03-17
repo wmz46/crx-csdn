@@ -11,7 +11,8 @@
     {
       "matches": [
         "https://blog.csdn.net/*",
-        "https://www.it1352.com/*"
+        "https://www.it1352.com/*",
+	"https://cloud.tencent.com/*"
       ],
       "js": [
         "main.js"
