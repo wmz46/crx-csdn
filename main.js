@@ -47,25 +47,27 @@
     //去百度搜索广告
     let innerHTML = "";
     setInterval(function () {
-      let temp = document.querySelector('#content_left').innerHTML;
-      if (innerHTML != temp) {
-        innerHTML = temp
-        let adTags = document.querySelectorAll('.ec-tuiguang')
-        adTags.forEach(tag => {
-          let parent = tag.parentNode
-          while (parent != null) {
-            if (parent.className.indexOf('c-container') > -1) {
-              parent.style.display = 'none'
-              break;
-            } else {
-              parent = parent.parentNode
+      if (document.querySelector('#content_left')) {
+        let temp = document.querySelector('#content_left').innerHTML;
+        if (innerHTML != temp) {
+          innerHTML = temp
+          let adTags = document.querySelectorAll('.ec-tuiguang')
+          adTags.forEach(tag => {
+            let parent = tag.parentNode
+            while (parent != null) {
+              if (parent.className.indexOf('c-container') > -1) {
+                parent.style.display = 'none'
+                break;
+              } else {
+                parent = parent.parentNode
+              }
             }
+          })
+          //去百度爱采购
+          let b2bDom = document.querySelector('.op-b2b-straight')
+          if (b2bDom != null) {
+            b2bDom.parentNode.style.display = 'none'
           }
-        })
-        //去百度爱采购
-        let b2bDom = document.querySelector('.op-b2b-straight')
-        if (b2bDom != null) {
-          b2bDom.parentNode.style.display = 'none'
         }
       }
     }, 500);
